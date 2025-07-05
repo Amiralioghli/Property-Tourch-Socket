@@ -1,0 +1,177 @@
+/* ===== Base Setup ===== */
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== House & Roof ===== */
+.house {
+  width: 90vw;
+  max-width: 400px;
+  height: 80vh;
+  max-height: 500px;
+  background: #e6e6e6;
+  border: 4px solid #999;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.roof {
+  width: 0;
+  height: 0;
+  border-left: 50vw solid transparent;
+  border-right: 50vw solid transparent;
+  border-bottom: 25vh solid #b5651d;
+  max-width: 420px;
+  max-height: 100px;
+  position: absolute;
+  top: -96px;
+}
+
+/* ===== Room Content ===== */
+.room {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 5% 5%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ===== Light Area (centered and from top) ===== */
+.light-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 0;
+}
+
+/* ===== Wire and Connection ===== */
+.wire-connection {
+  width: 4vw;
+  height: 4vw;
+  max-width: 15px;
+  max-height: 15px;
+  background: dimgray;
+  margin: 0 auto;
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  margin-top: 0;
+  box-shadow: 0 0 3px #333;
+}
+
+.wire {
+  width: 1vw;
+  height: 15vh;
+  background: gray;
+  margin: 0 auto;
+}
+
+/* ===== Socket (if still used) ===== */
+.socket-top,
+.socket-bottom,
+.socket-back {
+  display: none; /* Hidden if you're not using the socket anymore */
+}
+
+/* ===== Bulb ===== */
+.bulb-top {
+  width: 11vw;
+  height: 7vw;
+  max-width: 45px;
+  max-height: 30px;
+  background-color: lightgray;
+  margin: 0 auto;
+  margin-top: -10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.bulb-bottom {
+  width: 20vw;
+  height: 20vw;
+  max-width: 80px;
+  max-height: 80px;
+  background-color: lightgray;
+  margin: 0 auto;
+  border-radius: 50%;
+  margin-top: -10px;
+  transition: all 0.3s ease;
+}
+
+.bulbOn {
+  background-color: lightyellow;
+  box-shadow: 0px 10px 100px 10px lightyellow;
+}
+
+/* ===== Switch Section ===== */
+.switch-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5vh;
+}
+
+.switch-cover {
+  height: 25vw;
+  width: 16vw;
+  max-height: 120px;
+  max-width: 80px;
+  background: #808080;
+  box-shadow: 0px 0px 5px darkgray;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.screw {
+  width: 1vw;
+  height: 1vw;
+  max-width: 5px;
+  max-height: 5px;
+  border-radius: 50%;
+  background-color: darkgray;
+}
+
+.switch {
+  width: 50%;
+  height: 50%;
+  background: linear-gradient(darkgray, gray);
+  border: 1px solid black;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.on {
+  background: linear-gradient(gray, darkgray);
+  border-top: 5px solid darkgray;
+  border-bottom: 1px solid black;
+}
+
+/* ===== Mobile Adjustments (optional) ===== */
+@media (max-width: 480px) {
+  .room {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 10px;
+  }
+
+  .switch-container {
+    margin-top: 40px;
+  }
+}
